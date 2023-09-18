@@ -130,6 +130,11 @@ return {
     end
   },
 
+  -- Syntax
+  {
+    'sheerun/vim-polyglot'
+  },
+
   -- -- Treesitter
   -- {
   --   'nvim-treesitter/nvim-treesitter',
