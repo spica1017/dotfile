@@ -172,3 +172,14 @@ function peco-cdr () {
 zle -N peco-cdr
 bindkey '^E' peco-cdr
 
+## ghq
+function peco-src () {
+  local selected_dir=$(ghq list -p | peco --prompt="repositories >" --query "$LBUFFER")
+  if [ -n "$selected_dir" ]; then
+    BUFFER="cd ${selected_dir}"
+    zle accept-line
+  fi
+  zle clear-screen
+}
+zle -N peco-src
+bindkey '^X' peco-src
