@@ -183,3 +183,7 @@ function peco-src () {
 }
 zle -N peco-src
 bindkey '^X' peco-src
+
+
+# starship
+eval "$(starship init zsh)"
