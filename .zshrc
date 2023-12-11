@@ -187,3 +187,7 @@ bindkey '^X' peco-src
 
 # starship
 eval "$(starship init zsh)"
+
+
+# zoxide
+eval "$(zoxide init zsh)"
