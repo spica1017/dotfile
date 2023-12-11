@@ -1,3 +1,4 @@
 require 'setting/main_setting'
-require 'plugin/lazy_nvim'
-
+if not vim.g.vscode then
+  require 'plugin/lazy_nvim'
+end
