@@ -191,3 +191,24 @@ eval "$(starship init zsh)"
 
 # zoxide
 eval "$(zoxide init zsh)"
+alias cd='z'
+
+# exa
+if [[ $(command -v exa) ]]; then
+  alias ls='exa --git --icons'
+  alias ll='exa -l --git --icons'
+  alias la='exa -la --git --icons'
+  alias lta='exa -lT --git --icons'
+  alias lt='exa -T --git --icons'
+fi
+
+# cdls
+cdls()
+{
+  \cd "$@" && ls
+}
+alias cd='cdls'
+
+
+
+
